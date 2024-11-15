@@ -7,6 +7,7 @@ import Signup from "./pages/Signup";
 import AdminDashboard from "./pages/AdminDashboard";
 import MentorDashboard from "./pages/MentorDashboard";
 import StudentDashboard from "./pages/StudentDashboard";
+import CourseDetailsPage from "./pages/CourseDetailsPage";
 
 import Navbar from "./components/Navbar";
 
@@ -16,6 +17,7 @@ function App () {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />}/>
+        <Route path="/course-details" element={<CourseDetailsPage />}/>
         <Route path="/login" element={<Login />}/>
         <Route path="/signup" element={<Signup />}/>
         <Route path="/admin-dashboard" element={<AdminDashboard />}/>
