@@ -41,6 +41,12 @@ const Home = () => {
             />
           ))}
         </div>
+        
+        <button 
+            onClick={() => navigate('/courses')} className="view-courses-button">
+            View All Courses
+        </button>
+
       </section>
 
       {/* Testimonials Section */}

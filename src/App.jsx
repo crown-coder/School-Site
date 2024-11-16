@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import CoursesPage from "./pages/CoursesPage";
 import AdminDashboard from "./pages/AdminDashboard";
 import MentorDashboard from "./pages/MentorDashboard";
 import StudentDashboard from "./pages/StudentDashboard";
@@ -18,6 +19,7 @@ function App () {
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/course-details" element={<CourseDetailsPage />}/>
+        <Route path="/courses" element={<CoursesPage />} />
         <Route path="/login" element={<Login />}/>
         <Route path="/signup" element={<Signup />}/>
         <Route path="/admin-dashboard" element={<AdminDashboard />}/>
