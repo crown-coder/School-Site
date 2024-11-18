@@ -1,6 +1,5 @@
 import React from 'react'
 import { useLocation, useNavigate } from 'react-router-dom';
-
 import Button from '../components/Button'
 
 const CourseDetailsPage = () => {
@@ -25,6 +24,7 @@ const CourseDetailsPage = () => {
           <p><strong>Level:</strong> {course?.level || "N/A"}</p>
           <button className='enroll-button'>Enroll Now</button>
         </div>
+        
         <div className='instructor-info'>
           <h2>Instructor</h2>
           <p><strong>Name:</strong> John Doe</p>
