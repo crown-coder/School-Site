@@ -12,10 +12,34 @@ const Home = () => {
   }
 
   const courses = [
-    { title: 'JavaScript Basics', description: "Learn the fundamentals of JavaScript.", imageUrl: "https://img.freepik.com/free-vector/javascript-frameworks-concept-illustration_114360-734.jpg?semt=ais_hybrid"},
-    { title: 'Intro to React', description: "Build dynamic UIs with React", imageUrl: "https://img.freepik.com/free-photo/atomic-molecule-life-science-study-experiment-graphic_53876-147646.jpg?semt=ais_hybrid"},
-    { title: 'Backend Development', description: "Master backend technologies.", imageUrl: "https://img.freepik.com/premium-vector/flat-design-backend-developer-concept-illustration-websites-landing-pages-mobile-applications-posters-banners_108061-779.jpg?semt=ais_hybrid"},
-  ]
+    { 
+      title: 'JavaScript Basics', 
+      description: "Learn the fundamentals of JavaScript.", 
+      imageUrl: "https://img.freepik.com/free-vector/javascript-frameworks-concept-illustration_114360-734.jpg?semt=ais_hybrid",
+      price: 30,
+      duration: "3 hours",
+      level: "Beginner",
+      syllabus: ["Introduction to JS", "Variables and Data Types", "Loops and Functions"],
+    },
+    { 
+      title: 'Intro to React', 
+      description: "Build dynamic UIs with React", 
+      imageUrl: "https://img.freepik.com/free-photo/atomic-molecule-life-science-study-experiment-graphic_53876-147646.jpg?semt=ais_hybrid",
+      price: 40,
+      duration: "4 hours",
+      level: "Beginner",
+      syllabus: ["JSX Basics", "Components and Props", "State and Lifecycle"],
+    },
+    { 
+      title: 'Backend Development', 
+      description: "Master backend technologies.", 
+      imageUrl: "https://img.freepik.com/premium-vector/flat-design-backend-developer-concept-illustration-websites-landing-pages-mobile-applications-posters-banners_108061-779.jpg?semt=ais_hybrid",
+      price: 50,
+      duration: "5 hours",
+      level: "Beginner",
+      syllabus: ["Node.js Basics", "Express.js Introduction", "Database Integration"],
+    },
+  ];
 
   return (
     <div>
