@@ -1,23 +1,30 @@
-// src/pages/ProductPage.jsx
-import React from 'react'
-import { useLocation, useNavigate } from 'react-router-dom'
-import Button from '../components/Button'
+import React, { useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
+import Button from '../components/Button';
 
 const ProductPage = () => {
   const location = useLocation();
   const navigate = useNavigate();
-
-  // Get the product object passed from the ProductListPage
   const product = location.state;
+
+  const [showConfirmation, setShowConfirmation] = useState(false);
+
+  const handleBuyNow = () => {
+    setShowConfirmation(true);
+  };
+
+  const handleGoToCheckout = () => {
+    // Redirect to checkout page or product purchase process
+    navigate('/checkout', { state: product });
+  };
 
   return (
     <div className='product-page-container'>
       <button onClick={() => navigate(-1)}>Back to Products</button>
-
       <section className='product-details'>
         <div className='product-header'>
-          <h1>{product?.name || "Product Title"}</h1>
-          <img src={product?.imageUrl || "https://via.placeholder.com/500"} alt={product?.name || "Product Image"} />
+          <h1>{product?.title || "Product Title"}</h1>
+          <img src={product?.imageUrl || "placeholder.jpg"} alt={product?.title || "Product Image"} />
           <p>{product?.description || "Product Description"}</p>
         </div>
 
@@ -25,15 +32,24 @@ const ProductPage = () => {
           <h2>Product Information</h2>
           <p><strong>Price:</strong> ${product?.price || "N/A"}</p>
           <p><strong>Category:</strong> {product?.category || "N/A"}</p>
-          <button className='buy-now-button'>Buy Now</button>
+          <button className='buy-now-button' onClick={handleBuyNow}>Buy Now</button>
         </div>
 
         <div className='product-seller'>
           <h2>Seller Info</h2>
           <p><strong>Name:</strong> {product?.sellerName || "Seller Name"}</p>
-          <img src={product?.sellerImage || "https://via.placeholder.com/150"} alt="seller" className='seller-image' />
+          <img src={product?.sellerImage || "seller-placeholder.jpg"} alt="seller" className='seller-image' />
         </div>
       </section>
+
+      {/* Confirmation Modal */}
+      {showConfirmation && (
+        <div className="confirmation-modal">
+          <p>Are you sure you want to purchase this product?</p>
+          <Button text="Proceed to Checkout" onClick={handleGoToCheckout} />
+          <Button text="Cancel" onClick={() => setShowConfirmation(false)} />
+        </div>
+      )}
     </div>
   );
 }

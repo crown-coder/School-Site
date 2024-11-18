@@ -807,6 +807,176 @@ nav .logo {
   color: #0056b3;
 }
 
+.confirmation-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.confirmation-modal p {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.confirmation-modal button {
+  margin: 5px;
+}
+.checkout-container, .enroll-container, .thank-you-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.checkout-container form, .enroll-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.checkout-container input, .enroll-container input {
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+}
+
+.checkout-button, .enroll-button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.checkout-button:hover, .enroll-button:hover {
+  background-color: #218838;
+}
+
+.thank-you-container {
+  text-align: center;
+}
+
+.thank-you-container a {
+  color: #007bff;
+  text-decoration: none;
+}
+.faq {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+}
+
+.faq-item h3 {
+  font-size: 1.4rem;
+  color: #007bff;
+}
+
+.faq-item p {
+  font-size: 1rem;
+  color: #555;
+}
+.contact-us {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-us h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.contact-us form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-us input, .contact-us textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contact-us button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.contact-us button:hover {
+  background-color: #0056b3;
+}
+
+
+footer {
+  width: calc(100% - 20px);
+  background-color: #333;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+footer .footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+footer .footer-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+footer .footer-links a:hover {
+  color: #f39c12;
+}
+
+footer .social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+footer .social-links a {
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+footer .social-links a:hover {
+  color: #f39c12;
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {

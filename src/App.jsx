@@ -12,6 +12,9 @@ import AdminDashboard from "./pages/AdminDashboard";
 import MentorDashboard from "./pages/MentorDashboard";
 import StudentDashboard from "./pages/StudentDashboard";
 import CourseDetailsPage from "./pages/CourseDetailsPage";
+import CheckoutPage from "./pages/CheckoutPage";
+import EnrollmentPage from "./pages/EnrollmentPage";
+import ThankYouPage from "./pages/ThankYouPage";
 
 import Navbar from "./components/Navbar";
 
@@ -28,9 +31,12 @@ function App () {
         <Route path="/login" element={<Login />}/>
         <Route path="/signup" element={<Signup />}/>
         <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/checkout" element={<CheckoutPage />} />
+        <Route path="/enroll" element={<EnrollmentPage />} />
         <Route path="/admin-dashboard" element={<AdminDashboard />}/>
         <Route path="/mentor-dashboard" element={<MentorDashboard />}/>
         <Route path="/student-dashboard" element={<StudentDashboard />}/>
+        <Route path="/thank-you" element={<ThankYouPage />} />
       </Routes>
     </Router>
   )

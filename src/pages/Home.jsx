@@ -1,6 +1,10 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
+import FAQPage from '../components/FAQPage'
+import ContactPage from '../components/ContactPage'
+import Footer from '../components/Footer'
+
 import Card from '../components/Card'
 import Button from '../components/Button'
 
@@ -79,6 +83,19 @@ const Home = () => {
         <p>"Great platform with quality Courses!" - User A</p>
         <p>"I've learned so much here." - User B</p>
       </section>
+
+      {/* FAQ Section */}
+      <section className='faq'>
+        <FAQPage />
+      </section>
+
+      {/* Contact Section */}
+      <section className='contact'>
+        <ContactPage />
+      </section>
+
+      {/* Footer Section */}
+      <Footer />
     </div>
   )
 }
