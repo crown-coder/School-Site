@@ -21,8 +21,8 @@ const CourseDetailsPage = () => {
 
         <div className='course-info'>
           <h2>Course Information</h2>
-          <p><strong>Duration:</strong> 10 hours</p>
-          <p><strong>Level:</strong> Beginner</p>
+          <p><strong>Duration:</strong> {course?.duration || "N/A"}</p>
+          <p><strong>Level:</strong> {course?.level || "N/A"}</p>
           <button className='enroll-button'>Enroll Now</button>
         </div>
         <div className='instructor-info'>
@@ -36,9 +36,9 @@ const CourseDetailsPage = () => {
       <section className='syllabus'>
         <h2>Course Syllabus</h2>
         <ul>
-            <li>Module 1: Introduction</li>
-            <li>Module 2: HTML and CSS</li>
-            <li>Module 3: JavaScript Basics</li>
+            {course.syllabus.map((syllabu) => (
+              <li key={syllabu}>{syllabu}</li>
+            ))}
         </ul>
       </section>
     </div>
