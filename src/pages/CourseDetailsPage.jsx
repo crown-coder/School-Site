@@ -8,39 +8,69 @@ const CourseDetailsPage = () => {
   const course = location.state;
 
   const [showConfirmation, setShowConfirmation] = useState(false);
+  const [isEnrolled, setIsEnrolled] = useState(false);
 
   const handleEnrollNow = () => {
     setShowConfirmation(true);
   };
 
   const handleEnrollCourse = () => {
-    // Redirect to course enrollment process
-    navigate('/enroll', { state: course });
+    setShowConfirmation(false);
+    setIsEnrolled(true);
+    // TODO: Additional enrollment logic here, such as saving enrollment in a database
   };
 
   return (
-    <div className='course-details-container'>
-      <button onClick={() => navigate(-1)}>Back to Courses</button>
-      <section className='course-details'>
-        <div className='course-header'>
-          <h1>{course?.title || "Course Title"}</h1>
-          <img src={course?.imageUrl || "placeholder.jpg"} alt={course?.title || "Course Image"} />
-          <p>{course?.description || "Course Description"}</p>
+    <div className="course-details-container">
+      <button className="back-button" onClick={() => navigate(-1)}>Back to Courses</button>
+
+      <div className="course-content-wrapper">
+        {/* Left Section */}
+        <div className="left-section">
+          <div className="video-player">
+            <iframe
+              src={`https://www.youtube.com/embed/${course?.introVideoId || 'dQw4w9WgXcQ'}`}
+              title={course?.title || 'Course Intro Video'}
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+
+          <div className="course-details">
+            <h1>{course?.title || "Course Title"}</h1>
+            <p>{course?.description || "Course Description"}</p>
+            <p><strong>Duration:</strong> {course?.duration || "N/A"}</p>
+            <p><strong>Level:</strong> {course?.level || "N/A"}</p>
+            {!isEnrolled && (
+              <button className="enroll-button" onClick={handleEnrollNow}>Enroll Now</button>
+            )}
+          </div>
+
+          <div className="instructor-info">
+            <h2>Instructor</h2>
+            <p><strong>Name:</strong> {course?.instructorName || "John Doe"}</p>
+            <img
+              src={course?.instructorImage || "instructor-placeholder.jpg"}
+              alt="Instructor"
+              className="instructor-image"
+            />
+          </div>
         </div>
 
-        <div className='course-info'>
-          <h2>Course Information</h2>
-          <p><strong>Duration:</strong> {course?.duration || "N/A"}</p>
-          <p><strong>Level:</strong> {course?.level || "N/A"}</p>
-          <button className='enroll-button' onClick={handleEnrollNow}>Enroll Now</button>
+        {/* Right Section */}
+        <div className="right-section">
+          <h2>Course Modules</h2>
+          <ul>
+            {course?.modules?.map((module, index) => (
+              <li key={index} className={!isEnrolled ? 'locked' : ''}>
+                <span>{module.title || "No Modules for this Course"}</span>
+                {!isEnrolled && <span className="lock-icon">🔒</span>}
+              </li>
+            ))}
+          </ul>
         </div>
-
-        <div className='instructor-info'>
-          <h2>Instructor</h2>
-          <p><strong>Name:</strong> John Doe</p>
-          <img src="instructor-placeholder.jpg" alt="instructor" className='instructor-image' />
-        </div>
-      </section>
+      </div>
 
       {/* Confirmation Modal */}
       {showConfirmation && (
@@ -52,6 +82,6 @@ const CourseDetailsPage = () => {
       )}
     </div>
   );
-}
+};
 
 export default CourseDetailsPage;

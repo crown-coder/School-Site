@@ -16,32 +16,81 @@ const Home = () => {
   }
 
   const courses = [
-    { 
-      title: 'JavaScript Basics', 
-      description: "Learn the fundamentals of JavaScript.", 
-      imageUrl: "https://img.freepik.com/free-vector/javascript-frameworks-concept-illustration_114360-734.jpg?semt=ais_hybrid",
-      price: 30,
-      duration: "3 hours",
+    {
+      id: 1,
+      title: "React for Beginners",
+      category: "Programming",
+      description: "Learn React from scratch.",
+      imageUrl: "coming.jpg",
+      price: "$50",
+      duration: "10 hours",
       level: "Beginner",
-      syllabus: ["Introduction to JS", "Variables and Data Types", "Loops and Functions"],
+      introVideoId: "dQw4w9WgXcQ", // Replace with an actual video ID
+      instructorName: "John Smith",
+      instructorImage: "https://via.placeholder.com/150",
+      modules: [
+        { title: "Introduction to React" },
+        { title: "JSX and Rendering" },
+        { title: "Components and Props" },
+        { title: "State and Lifecycle" },
+      ],
     },
-    { 
-      title: 'Intro to React', 
-      description: "Build dynamic UIs with React", 
-      imageUrl: "https://img.freepik.com/free-photo/atomic-molecule-life-science-study-experiment-graphic_53876-147646.jpg?semt=ais_hybrid",
-      price: 40,
-      duration: "4 hours",
-      level: "Beginner",
-      syllabus: ["JSX Basics", "Components and Props", "State and Lifecycle"],
+    {
+      id: 2,
+      title: "UI/UX Design Basics",
+      category: "Design",
+      description: "Introduction to UI/UX principles and best practices.",
+      imageUrl: "coming.jpg",
+      price: "$30",
+      duration: "8 hours",
+      level: "Intermediate",
+      introVideoId: "oHg5SJYRHA0", // Replace with an actual video ID
+      instructorName: "Jane Doe",
+      instructorImage: "https://via.placeholder.com/150",
+      modules: [
+        { title: "What is UI/UX?" },
+        { title: "Design Principles" },
+        { title: "Prototyping Basics" },
+        { title: "User Testing" },
+      ],
     },
-    { 
-      title: 'Backend Development', 
-      description: "Master backend technologies.", 
-      imageUrl: "https://img.freepik.com/premium-vector/flat-design-backend-developer-concept-illustration-websites-landing-pages-mobile-applications-posters-banners_108061-779.jpg?semt=ais_hybrid",
-      price: 50,
-      duration: "5 hours",
+    {
+      id: 3,
+      title: "Digital Marketing 101",
+      category: "Marketing",
+      description: "Get started with Digital Marketing essentials.",
+      imageUrl: "coming.jpg",
+      price: "$40",
+      duration: "6 hours",
       level: "Beginner",
-      syllabus: ["Node.js Basics", "Express.js Introduction", "Database Integration"],
+      introVideoId: "3JZ_D3ELwOQ", // Replace with an actual video ID
+      instructorName: "Michael Lee",
+      instructorImage: "https://via.placeholder.com/150",
+      modules: [
+        { title: "SEO Basics" },
+        { title: "Social Media Marketing" },
+        { title: "Content Strategy" },
+        { title: "Analytics and Reporting" },
+      ],
+    },
+    {
+      id: 4,
+      title: "Advanced JavaScript",
+      category: "Programming",
+      description: "Master advanced JavaScript concepts.",
+      imageUrl: "coming.jpg",
+      price: "$60",
+      duration: "12 hours",
+      level: "Advanced",
+      introVideoId: "jNQXAC9IVRw", // Replace with an actual video ID
+      instructorName: "Emily Davis",
+      instructorImage: "https://via.placeholder.com/150",
+      modules: [
+        { title: "Closures and Scope" },
+        { title: "Asynchronous Programming" },
+        { title: "Event Loop and Callbacks" },
+        { title: "JavaScript Design Patterns" },
+      ],
     },
   ];
 
