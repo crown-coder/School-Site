@@ -978,4 +978,109 @@ footer .social-links a:hover {
     max-width: 100%;
   }
 }
-  
+
+/* General Dashboard Layout */
+.dashboard-layout {
+  display: flex;
+  height: 100vh;
+  background-color: #f9fafb;
+}
+
+/* Sidebar */
+.dashboard-sidebar {
+  width: 260px;
+  background-color: #1e293b;
+  color: #ffffff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-sidebar .sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px 0;
+}
+
+.dashboard-sidebar .sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #cbd5e1;
+  text-decoration: none;
+  padding: 12px 20px;
+  margin: 5px 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.dashboard-sidebar .sidebar-link svg {
+  font-size: 1.2rem;
+}
+
+.dashboard-sidebar .sidebar-link:hover {
+  background-color: #334155;
+  color: #38bdf8;
+}
+
+.dashboard-sidebar .active-link {
+  background-color: #334155;
+  color: #38bdf8;
+}
+
+.dashboard-sidebar .sidebar-footer {
+  padding: 20px;
+  background-color: #0f172a;
+  text-align: center;
+}
+
+
+/* Topbar */
+.dashboard-topbar {
+  background-color: #ffffff;
+  padding: 15px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dashboard-topbar .topbar-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #1e293b;
+}
+
+.dashboard-topbar .topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.dashboard-topbar .topbar-button {
+  background-color: #38bdf8;
+  color: #ffffff;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dashboard-topbar .topbar-button:hover {
+  background-color: #1e40af;
+}
+
+/* Main Content */
+.dashboard-main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-content {
+  padding: 20px;
+  overflow-y: auto;
+  height: calc(100vh - 60px); /* Adjust for topbar height */
+}
+
