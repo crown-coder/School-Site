@@ -1,4 +1,7 @@
 import React from 'react'
+import './Home.css';
+import Shelf from '../assets/shelf.png';
+
 import { useNavigate } from 'react-router-dom'
 
 import FAQPage from '../components/FAQPage'
@@ -95,13 +98,18 @@ const Home = () => {
   ];
 
   return (
-    <div>
+    <div className='home'>
       {/* Hero Section */}
       <section className='hero'>
-        <h1>Welcome to Our E-Learning Platform</h1>
-        <p>Gain skills and knowledge with our online courses</p>
-        <Button text = "Get Started" />
-        <Button text = "Explore Courses" />
+        <div className='left'>
+          <h1>Welcome to Our <br/>E-Learning Platform</h1>
+          <p>Gain skills and knowledge with our online <br />courses and our expect, certified mentors, <br />both online and physical.</p>
+          <Button text = "Get Started" />
+          <Button text = "Explore Courses" />
+        </div>
+        <div className='right'>
+          <img src={Shelf} alt="Hero photo" />
+        </div>
       </section>
 
       {/* Featured Courses Section */}
