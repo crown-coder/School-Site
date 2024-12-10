@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Button from '../components/Button';
+import './CourseDetails.css';
 
 const CourseDetailsPage = () => {
   const location = useLocation();

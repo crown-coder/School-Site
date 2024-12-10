@@ -1,6 +1,10 @@
 import React from 'react'
 import './Home.css';
 import Shelf from '../assets/shelf.png';
+import ReactThumbnail from '../assets/react.jpeg';
+import UiUx from '../assets/ui:ux.jpeg';
+import Digital from '../assets/digital.jpeg';
+import Js from '../assets/js.jpeg';
 
 import { useNavigate } from 'react-router-dom'
 
@@ -24,7 +28,7 @@ const Home = () => {
       title: "React for Beginners",
       category: "Programming",
       description: "Learn React from scratch.",
-      imageUrl: "coming.jpg",
+      imageUrl: ReactThumbnail,
       price: "$50",
       duration: "10 hours",
       level: "Beginner",
@@ -43,7 +47,7 @@ const Home = () => {
       title: "UI/UX Design Basics",
       category: "Design",
       description: "Introduction to UI/UX principles and best practices.",
-      imageUrl: "coming.jpg",
+      imageUrl: UiUx,
       price: "$30",
       duration: "8 hours",
       level: "Intermediate",
@@ -62,7 +66,7 @@ const Home = () => {
       title: "Digital Marketing 101",
       category: "Marketing",
       description: "Get started with Digital Marketing essentials.",
-      imageUrl: "coming.jpg",
+      imageUrl: Digital,
       price: "$40",
       duration: "6 hours",
       level: "Beginner",
@@ -81,7 +85,7 @@ const Home = () => {
       title: "Advanced JavaScript",
       category: "Programming",
       description: "Master advanced JavaScript concepts.",
-      imageUrl: "coming.jpg",
+      imageUrl: Js,
       price: "$60",
       duration: "12 hours",
       level: "Advanced",
@@ -105,7 +109,7 @@ const Home = () => {
           <h1>Welcome to Our <br/>E-Learning Platform</h1>
           <p>Gain skills and knowledge with our online <br />courses and our expect, certified mentors, <br />both online and physical.</p>
           <Button text = "Get Started" />
-          <Button text = "Explore Courses" />
+          {/* <Button text = "Explore Courses" /> */}
         </div>
         <div className='right'>
           <img src={Shelf} alt="Hero photo" />
@@ -142,9 +146,9 @@ const Home = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className='faq'>
+      {/* <section className='faq'>
         <FAQPage />
-      </section>
+      </section> */}
 
       {/* Contact Section */}
       <section className='contact'>

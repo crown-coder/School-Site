@@ -11,24 +11,23 @@
 }
 .hero h1 {
     font-weight: 500;
-    line-height: 40px;
-    font-size: 25px;
+    line-height: 60px;
+    font-size: 40px;
 }
 .hero p {
     margin: 10px 0;
 }
 .hero button {
     color: white;
-    background: rgb(151, 68, 252);
-    padding: 6px 15px;
-    border-radius: 5px;
+    background: rgb(177, 1, 74);
+    padding: 10px 15px;
+    border-radius: 15px;
     outline: none;
     border: none;
     margin-top: 20px ;
     margin-right: 20px;
     font-weight: 200;
     font-size: 15px;
-    box-shadow: 4pt 4pt 4px rgba(135, 37, 255, 0.234);
     cursor: pointer;
 }
 .hero img {
@@ -39,3 +38,139 @@
     border-radius: 10px;
     box-shadow: 2px 2px 4px rgba(135, 37, 255, 0.234);
 }
+/* Featured courses */
+.featured-courses {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.featured-courses h2 {
+    font-weight: 400;
+}
+.courses-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+.featured-courses button {
+    color: rgb(177, 1, 74);
+    background: transparent;
+    outline: none;
+    border: none;
+    margin-top: 20px ;
+    margin-right: 20px;
+    font-weight: 400;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/* Testimonials Section */
+.testimonials {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+    text-align: center;
+    margin: 20px 0;
+}
+  
+.testimonials h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+  
+.testimonials p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-top: 10px;
+}
+  
+.testimonials p:first-child {
+    margin-top: 0;
+}
+
+.contact-us {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-us h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .contact-us form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-us input, .contact-us textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    resize: none;
+  }
+  
+  .contact-us button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .contact-us button:hover {
+    background-color: #0056b3;
+  }
+  
+  
+  footer {
+    width: calc(100% - 20px);
+    background-color: #333;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  footer .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+  }
+  
+  footer .footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+  }
+  
+  footer .footer-links a:hover {
+    color: #f39c12;
+  }
+  
+  footer .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  footer .social-links a {
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+  }
+  
+  footer .social-links a:hover {
+    color: #f39c12;
+  }

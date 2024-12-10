@@ -1,5 +1,11 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './CoursesPage.css';
+
+import ReactThumbnail from '../assets/react.jpeg';
+import UiUx from '../assets/ui:ux.jpeg';
+import Digital from '../assets/digital.jpeg';
+import Js from '../assets/js.jpeg';
 
 
 const courses = [
@@ -8,7 +14,7 @@ const courses = [
       title: "React for Beginners",
       category: "Programming",
       description: "Learn React from scratch.",
-      imageUrl: "coming.jpg",
+      imageUrl: ReactThumbnail,
       price: "$50",
       duration: "10 hours",
       level: "Beginner",
@@ -27,7 +33,7 @@ const courses = [
       title: "UI/UX Design Basics",
       category: "Design",
       description: "Introduction to UI/UX principles and best practices.",
-      imageUrl: "coming.jpg",
+      imageUrl: UiUx,
       price: "$30",
       duration: "8 hours",
       level: "Intermediate",
@@ -46,7 +52,7 @@ const courses = [
       title: "Digital Marketing 101",
       category: "Marketing",
       description: "Get started with Digital Marketing essentials.",
-      imageUrl: "coming.jpg",
+      imageUrl: Digital,
       price: "$40",
       duration: "6 hours",
       level: "Beginner",
@@ -65,7 +71,7 @@ const courses = [
       title: "Advanced JavaScript",
       category: "Programming",
       description: "Master advanced JavaScript concepts.",
-      imageUrl: "coming.jpg",
+      imageUrl: Js,
       price: "$60",
       duration: "12 hours",
       level: "Advanced",
@@ -137,9 +143,8 @@ const CoursesPage = () => {
                         >
                             <img src={course.imageUrl} alt={course.title} className='course-image' />
                             <h2>{course.title}</h2>
-                            <p>{course.description}</p>
-                            <p><strong>Price:</strong> {course.price}</p>
-                            <p><strong>Duration:</strong> {course.duration}</p>
+                            <p className='description-text'>{course.description}</p>
+                            <p className='price-duration'>{course.price} | {course.duration}</p>
                         </div>
                     ))
                 ) : (
