@@ -8,7 +8,6 @@ import Js from '../assets/js.jpeg';
 
 import { useNavigate } from 'react-router-dom'
 
-import FAQPage from '../components/FAQPage'
 import ContactPage from '../components/ContactPage'
 import Footer from '../components/Footer'
 

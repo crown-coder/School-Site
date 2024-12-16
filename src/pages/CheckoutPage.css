@@ -1,0 +1,48 @@
+.checkout-container {
+    width: 75%;
+    margin: 20px auto;
+}
+.checkout-parent {
+    width: 100%;
+    display: flex;
+    padding: 20px;
+    gap: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+.product-detail {
+    width: 50%;
+}
+.product-detail img {
+    width: 100%;
+    height: 330px;
+    /* object-fit: contain; */
+    border-radius: 10px;
+}
+.checkout-parent form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.checkout-parent form h3 {
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.checkout-parent form label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+.checkout-parent form input,
+.checkout-parent form button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.checkout-parent form button {
+    background: pink;
+    border: none;
+    cursor: pointer;
+}

@@ -16,6 +16,9 @@ import CheckoutPage from "./pages/CheckoutPage";
 import EnrollmentPage from "./pages/EnrollmentPage";
 import ThankYouPage from "./pages/ThankYouPage";
 
+// import ProtectedRoute from "./components/ProtectedRoute";
+import MyCourses from "./pages/MyCourses";
+
 import Navbar from "./components/Navbar";
 
 function App () {
@@ -28,6 +31,16 @@ function App () {
         <Route path="/courses" element={<CoursesPage />} />
         <Route path="/product-list" element={<ProductListPage />} />
         <Route path="/product/:id" element={<ProductPage />} />
+        {/* <Route
+          path="/my-courses"
+          element = {
+            <ProtectedRoute>
+              <MyCourses />
+            </ProtectedRoute>
+          }
+        >
+        </Route> */}
+        <Route path="/my-courses" element={<MyCourses />} />
         <Route path="/login" element={<Login />}/>
         <Route path="/signup" element={<Signup />}/>
         <Route path="/forgot-password" element={<ForgotPassword />} />
