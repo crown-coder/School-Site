@@ -37,25 +37,16 @@ const CourseDetailsPage = () => {
               allowFullScreen
             ></iframe>
           </div>
-
-          <div className="course-details">
-            <h1>{course?.title || "Course Title"}</h1>
-            <p>{course?.description || "Course Description"}</p>
-            <p><strong>Duration:</strong> {course?.duration || "N/A"}</p>
-            <p><strong>Level:</strong> {course?.level || "N/A"}</p>
-            {!isEnrolled && (
-              <button className="enroll-button" onClick={handleEnrollNow}>Enroll Now</button>
-            )}
-          </div>
-
-          <div className="instructor-info">
-            <h2>Instructor</h2>
-            <p><strong>Name:</strong> {course?.instructorName || "John Doe"}</p>
-            <img
-              src={course?.instructorImage || "instructor-placeholder.jpg"}
-              alt="Instructor"
-              className="instructor-image"
-            />
+          <div className='course-infor'>
+            <div className="course-details">
+              <h1>{course?.title || "Course Title"}</h1>
+              <p>{course?.description || "Course Description"}</p>
+              <p><span>{course?.level || "N/A"}</span> | {course?.duration || "N/A"}</p>
+              <p>By: {course?.instructorName || "John Doe"}</p>
+              {!isEnrolled && (
+                <button className="enroll-button" onClick={handleEnrollNow}>Enroll Now</button>
+              )}
+            </div>
           </div>
         </div>
 
