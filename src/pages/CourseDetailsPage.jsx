@@ -67,9 +67,13 @@ const CourseDetailsPage = () => {
       {/* Confirmation Modal */}
       {showConfirmation && (
         <div className="confirmation-modal">
-          <p>Are you sure you want to enroll in this course?</p>
-          <Button text="Enroll Now" onClick={handleEnrollCourse} />
-          <Button text="Cancel" onClick={() => setShowConfirmation(false)} />
+          <div className='confirm-card'>
+            <p>Are you sure you want to enroll in this course?</p>
+            <div className='btns'>
+              <Button text="Cancel" onClick={() => setShowConfirmation(false)} />
+              <Button text="Enroll Now" onClick={handleEnrollCourse} className="enroll"/>
+            </div>
+          </div>
         </div>
       )}
     </div>

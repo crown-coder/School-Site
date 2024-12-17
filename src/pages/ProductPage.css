@@ -1,6 +1,7 @@
 .product-page-container {
     width: 75%;
     margin: 20px auto;
+    position: relative;
 }
 .product-details {
     display: flex;
@@ -35,3 +36,40 @@
     margin: 10px 0;
     border-radius: 5px;
 }
+.confirmation-modal {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 4pt 4pt 4px rgba(0, 0, 0, 0.9);
+    border: 1px solid #ccc;
+  }
+  .confirm-card {
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+  }
+  .btns {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .btns button{
+    background: none;
+    border: none;
+    outline: none;
+    color: crimson;
+    cursor: pointer;
+  }
+  .btns button:last-child {
+    background: green;
+    color: white;
+    padding: 5px 8px;
+    border-radius: 5px;
+  }

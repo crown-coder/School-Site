@@ -48,9 +48,13 @@ const ProductPage = () => {
       {/* Confirmation Modal */}
       {showConfirmation && (
         <div className="confirmation-modal">
-          <p>Are you sure you want to purchase this product?</p>
-          <Button text="Proceed to Checkout" onClick={handleGoToCheckout} />
-          <Button text="Cancel" onClick={() => setShowConfirmation(false)} />
+          <div className='confirm-card'>
+            <p>Are you sure you want to purchase this product?</p>
+            <div className='btns'>
+              <Button text="Cancel" onClick={() => setShowConfirmation(false)} />
+              <Button text="Proceed to Checkout" onClick={handleGoToCheckout} />
+            </div>
+          </div>
         </div>
       )}
     </div>
