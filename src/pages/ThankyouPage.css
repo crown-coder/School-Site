@@ -1,0 +1,9 @@
+.thank-you-container {
+    text-align: center;
+    margin-top: 50px;
+}
+  
+.thank-you-container a {
+    color: #007bff;
+    text-decoration: none;
+}
