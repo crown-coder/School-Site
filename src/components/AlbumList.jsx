@@ -7,13 +7,23 @@ const AlbumList = ({ onSelectAlbum }) => {
     { id: 2, title: 'UI/UX Design', description: 'Principles of UI/UX' },
   ]);
 
-  const addAlbum = () => {
-    const newAlbum = {
+  const [showForm, setShowForm] = useState(false);
+  const [newAlbum, setNewAlbum] = useState({ title: '', description: '' });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setNewAlbum({ ...newAlbum, [name]: value });
+  };
+
+  const handleAddAlbum = () => {
+    const album = {
       id: Date.now(),
-      title: prompt('Enter album title:'),
-      description: prompt('Enter album description:'),
+      title: newAlbum.title,
+      description: newAlbum.description,
     };
-    setAlbums([...albums, newAlbum]);
+    setAlbums([...albums, album]);
+    setShowForm(false);
+    setNewAlbum({ title: '', description: '' }); // Reset form
   };
 
   const deleteAlbum = (id) => {
@@ -23,13 +33,59 @@ const AlbumList = ({ onSelectAlbum }) => {
   return (
     <div className="album-list">
       <h2>Albums</h2>
-      <button onClick={addAlbum}>Add Album</button>
+
+      {/* Add Album Button */}
+      {!showForm && (
+        <button onClick={() => setShowForm(true)}>Add Album</button>
+      )}
+
+      {/* Add Album Form */}
+      {showForm && (
+        <div className="album-form">
+          <h3>Create New Album</h3>
+          <form>
+            <label>
+              Title:
+              <input
+                type="text"
+                name="title"
+                value={newAlbum.title}
+                onChange={handleInputChange}
+                placeholder="Enter album title"
+                required
+              />
+            </label>
+            <label>
+              Description:
+              <textarea
+                name="description"
+                value={newAlbum.description}
+                onChange={handleInputChange}
+                placeholder="Enter album description"
+                required
+              />
+            </label>
+            <div className="form-buttons">
+              <button type="button" onClick={handleAddAlbum}>
+                Save
+              </button>
+              <button type="button" onClick={() => setShowForm(false)}>
+                Cancel
+              </button>
+            </div>
+          </form>
+        </div>
+      )}
+
+      {/* Album List */}
       <ul>
         {albums.map(album => (
           <li key={album.id} onClick={() => onSelectAlbum(album)}>
             <h3>{album.title}</h3>
             <p>{album.description}</p>
-            <button onClick={(e) => { e.stopPropagation(); deleteAlbum(album.id); }}>Delete</button>
+            <button onClick={(e) => { e.stopPropagation(); deleteAlbum(album.id); }}>
+              Delete
+            </button>
           </li>
         ))}
       </ul>
