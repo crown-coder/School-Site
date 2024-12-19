@@ -1,9 +1,33 @@
 .mentor-dashboard {
-    padding: 20px;
+    width: 75%;
+    margin: 20px auto;
   }
-  
-  .mentor-dashboard h1 {
-    text-align: center;
+  .mentor-header {
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08), 
+              0 -4px 8px rgba(0, 0, 0, 0.08), 
+              4px 0 8px rgba(0, 0, 0, 0.08), 
+              -4px 0 8px rgba(0, 0, 0, 0.08);
   }
-  
+  .mentor-dashboard h1 {
+    font-weight: 200;
+    font-size: 18px;
+  }
+  .mentor-dashboard h1 span {
+    font-weight: 400;
+  }
+  .mentor-header button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    color: #ff5c5c;
+    cursor: pointer;
+  }

@@ -1,0 +1,25 @@
+.mentor-stats {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 20px;
+  }
+  
+  .stat {
+    flex: 1;
+    /* border: 1px solid #ccc; */
+    background: #f8f8f8;
+    border-radius: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 2pt 2pt 4px rgba(0, 0, 0, 0.1);
+  }
+  .stat h3 {
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+  .stat p {
+    font-size: 30px;
+    color: green;
+  }

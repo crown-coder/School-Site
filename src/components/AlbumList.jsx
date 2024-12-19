@@ -1,14 +1,20 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import ReactThumbnail from '../assets/react.jpeg';
+import UiUx from '../assets/ui:ux.jpeg';
+
 import './AlbumList.css';
 
-const AlbumList = ({ onSelectAlbum }) => {
+const AlbumList = () => {
   const [albums, setAlbums] = useState([
-    { id: 1, title: 'React Basics', description: 'Beginner React tutorials' },
-    { id: 2, title: 'UI/UX Design', description: 'Principles of UI/UX' },
+    { id: 1, title: 'React Basics', description: 'Beginner React tutorials', imageUrl: ReactThumbnail },
+    { id: 2, title: 'UI/UX Design', description: 'Principles of UI/UX', imageUrl: UiUx },
   ]);
 
   const [showForm, setShowForm] = useState(false);
   const [newAlbum, setNewAlbum] = useState({ title: '', description: '' });
+
+  const navigate = useNavigate();
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -20,6 +26,7 @@ const AlbumList = ({ onSelectAlbum }) => {
       id: Date.now(),
       title: newAlbum.title,
       description: newAlbum.description,
+      imageUrl: ReactThumbnail, // Placeholder image
     };
     setAlbums([...albums, album]);
     setShowForm(false);
@@ -34,12 +41,10 @@ const AlbumList = ({ onSelectAlbum }) => {
     <div className="album-list">
       <h2>Albums</h2>
 
-      {/* Add Album Button */}
       {!showForm && (
-        <button onClick={() => setShowForm(true)}>Add Album</button>
+        <button onClick={() => setShowForm(true)} className="add-album">Add Album</button>
       )}
 
-      {/* Add Album Form */}
       {showForm && (
         <div className="album-form">
           <h3>Create New Album</h3>
@@ -66,23 +71,19 @@ const AlbumList = ({ onSelectAlbum }) => {
               />
             </label>
             <div className="form-buttons">
-              <button type="button" onClick={handleAddAlbum}>
-                Save
-              </button>
-              <button type="button" onClick={() => setShowForm(false)}>
-                Cancel
-              </button>
+              <button type="button" onClick={handleAddAlbum}>Save</button>
+              <button type="button" onClick={() => setShowForm(false)}>Cancel</button>
             </div>
           </form>
         </div>
       )}
 
-      {/* Album List */}
       <ul>
         {albums.map(album => (
-          <li key={album.id} onClick={() => onSelectAlbum(album)}>
+          <li key={album.id} onClick={() => navigate(`/album/${album.id}`, { state: album })} className="course-card">
             <h3>{album.title}</h3>
-            <p>{album.description}</p>
+            <img src={album.imageUrl} alt={album.title} />
+            <p className="description-text">{album.description}</p>
             <button onClick={(e) => { e.stopPropagation(); deleteAlbum(album.id); }}>
               Delete
             </button>
